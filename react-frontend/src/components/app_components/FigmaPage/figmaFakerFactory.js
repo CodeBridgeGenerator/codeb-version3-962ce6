@@ -1,0 +1,71 @@
+
+import { faker } from "@faker-js/faker";
+export default (user,count,projectIdIds) => {
+    let data = [];
+    for (let i = 0; i < count; i++) {
+        const fake = {
+projectId: projectIdIds[i % projectIdIds.length],
+name: faker.lorem.sentence(1),
+fileId: faker.lorem.sentence(1),
+description: faker.lorem.sentence(1),
+isDefault: faker.lorem.sentence(1),
+textBody: faker.lorem.sentence(1),
+textEmphasis: faker.lorem.sentence(1),
+textSecondary: faker.lorem.sentence(1),
+textTertiary: faker.lorem.sentence(1),
+textCode: faker.lorem.sentence(1),
+textHighlight: faker.lorem.sentence(1),
+bgBorderTranslucent: faker.lorem.sentence(1),
+bgBody: faker.lorem.sentence(1),
+bgBorder: faker.lorem.sentence(1),
+bgHighlight: faker.lorem.sentence(1),
+bgSecondary: faker.lorem.sentence(1),
+bgTertiary: faker.lorem.sentence(1),
+formInvalidBorder: faker.lorem.sentence(1),
+formInvalidBg: faker.lorem.sentence(1),
+formValidBorder: faker.lorem.sentence(1),
+formValidBg: faker.lorem.sentence(1),
+textHeading: faker.lorem.sentence(1),
+textLink: faker.lorem.sentence(1),
+textLinkHover: faker.lorem.sentence(1),
+signalPrimaryFill: faker.lorem.sentence(1),
+signalPrimaryBg: faker.lorem.sentence(1),
+signalPrimaryBorder: faker.lorem.sentence(1),
+signalPrimaryText: faker.lorem.sentence(1),
+signalSecondaryFill: faker.lorem.sentence(1),
+signalSecondaryBg: faker.lorem.sentence(1),
+signalSecondaryBorder: faker.lorem.sentence(1),
+signalSecondaryText: faker.lorem.sentence(1),
+signalTertiaryFill: faker.lorem.sentence(1),
+signalTertiaryBg: faker.lorem.sentence(1),
+signalTertiaryBorder: faker.lorem.sentence(1),
+signalTertiaryText: faker.lorem.sentence(1),
+signalSuccessFill: faker.lorem.sentence(1),
+signalSuccessBg: faker.lorem.sentence(1),
+signalSuccessBorder: faker.lorem.sentence(1),
+signalSuccessText: faker.lorem.sentence(1),
+signalInfoFill: faker.lorem.sentence(1),
+signalInfoBg: faker.lorem.sentence(1),
+signalInfoBorder: faker.lorem.sentence(1),
+signalInfoText: faker.lorem.sentence(1),
+signalDangerFill: faker.lorem.sentence(1),
+signalDangerBg: faker.lorem.sentence(1),
+signalDangerBorder: faker.lorem.sentence(1),
+signalDangerText: faker.lorem.sentence(1),
+signalWarningFill: faker.lorem.sentence(1),
+signalWarningBg: faker.lorem.sentence(1),
+signalWarningBorder: faker.lorem.sentence(1),
+signalWarningText: faker.lorem.sentence(1),
+signalInvertFill: faker.lorem.sentence(1),
+signalInvertBg: faker.lorem.sentence(1),
+signalInvertBorder: faker.lorem.sentence(1),
+signalInvertText: faker.lorem.sentence(1),
+components: faker.lorem.sentence(1),
+
+updatedBy: user._id,
+createdBy: user._id
+        };
+        data = [...data, fake];
+    }
+    return data;
+};
